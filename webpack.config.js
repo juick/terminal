@@ -13,8 +13,8 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader") },
-            { test: /\.png$/, loader: "file?name=[name].[ext]" }
+            { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
+            { test: /\.png$/, loader: "url-loader" }
 	]
     },
     plugins: [

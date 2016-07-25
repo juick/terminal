@@ -1,9 +1,3 @@
-@font-face {
-	font-family: 'Inconsolata';
-	font-style: normal;
-	font-weight: normal;
-}
-
 html, body {
 	margin: 0;
 	height: 100%;
@@ -76,7 +70,7 @@ html, body {
 
 .terminal-interlaced {
 	color: white;
-	font-family: Inconsolata, monospace;
+	font-family: 
 }
 
 .terminal-interlaced a {
@@ -84,13 +78,13 @@ html, body {
 }
 
 .terminal-interlaced a.external {
-	background: dataurl("external.png") no-repeat scroll right center transparent;
+	background: url("external.png") no-repeat scroll right center transparent;
 	padding-right: 13px;
 	outline: none;
 }
 
 .terminal-interlaced .background {
-	background: dataurl("interlace.png") top left repeat, rgba(0, 0, 0, 0.9);
+	background: url("interlace.png") top left repeat, rgba(0, 0, 0, 0.9);
 	height: 100%;
 	left: 0;
 	pointer-events: none;
@@ -100,7 +94,7 @@ html, body {
 }
 
 .terminal-interlaced .background .interlace {
-	background: dataurl("interlace.png") top left repeat, transparent;
+	background: url("interlace.png") top left repeat, transparent;
 	height: 100%;
 	left: 0;
 	opacity: 0.15;
@@ -132,7 +126,7 @@ html, body {
 }
 
 .terminal-modern a.external {
-	background: dataurl("external.png") no-repeat scroll right center transparent;
+	background: url("external.png") no-repeat scroll right center transparent;
 	padding-right: 13px;
 	outline: none;
 }
