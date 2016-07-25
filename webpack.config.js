@@ -14,7 +14,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader") },
-            { test: /\.png$/, loader: "file" }
+            { test: /\.png$/, loader: "file?name=[name].[ext]" }
 	]
     },
     plugins: [
