@@ -1,3 +1,4 @@
+require('es6-promise').polyfill()
 var webpack = require("webpack")
 var globby = require("globby")
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
