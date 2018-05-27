@@ -1,7 +1,6 @@
-require('es6-promise').polyfill()
 var webpack = require("webpack")
 var globby = require("globby")
-var ExtractTextPlugin = require("extract-text-webpack-plugin")
+var MiniCssExtractPlugin = require("mini-css-extract-plugin")
 module.exports = {
     entry: {
         "terminal" : globby.sync([
@@ -13,13 +12,14 @@ module.exports = {
         filename: "[name].js"
     },
     module: {
-        loaders: [
-            { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
-            { test: /\.png$/, loader: "url-loader" }
+        rules: [
+            { test: /\.css$/, use: [ MiniCssExtractPlugin.loader, "css-loader" ] },
+            { test: /\.png$/, use: "url-loader" }
 	]
     },
     plugins: [
-        new ExtractTextPlugin("terminal.css", {
+        new MiniCssExtractPlugin({
+            filename: "terminal.css",
             allChunks: true
         })
     ]
