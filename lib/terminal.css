@@ -71,7 +71,7 @@ html, body {
 
 .terminal-interlaced {
 	color: white;
-	font-family: 
+	font-family: Inconsolata, monospace;
 }
 
 .terminal-interlaced a {
